@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TestApp</title>
+<!-- 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- 		<link rel="stylesheet" href="/css/bootstrap.css"> -->
+		<link rel="stylesheet" href="/css/style.css">
+		
+	</head>
+	<body>
+	
+		<nav role="navigation" class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		
+		      </button> <a href="index.html" class="navbar-brand" style="color:#000000">Paulo Pinzon-Iradian</a>
+		
+		    </div>
+		    <div id="navbarCollapse" class="collapse navbar-collapse">
+		      <ul class="nav navbar-nav">
+		        <li><a href="work.html" style="color:#000000; margin-left:1.5em;">Work</a>
+		
+		        </li>
+		        <li><a href="about.html" style="color:#000000; margin-left:1.5em;">About</a>
+		
+		        </li>
+		        <li><a href="contact.php" style="color:#000000; margin-left:1.5em;">Contact</a>
+		
+		        </li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a target="_blank" href="https://www.facebook.com/pages/Paulo-Pinzon-Iradian/849542288428399" style="color:#3b5197;"><i class="fa fa-facebook-square"></i></a>
+		        </li>
+		        <li><a target="_blank" href="https://instagram.com/paulopinzonart/" style="color:#125688;"><i class="fa fa-instagram"></i></a>
+		        </li>
+		        <li><a target="_blank" href="https://twitter.com/PauloPinzonArt" style="color:#00c7f4;"><i class="fa fa-twitter-square"></i></a>
+		        </li>
+		        
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+	
+	
+	
+		<nav class="navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Navbar</a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  <div class="navbar-nav">
+			    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+			    <a class="nav-item nav-link" href="#">Features</a>
+			    <a class="nav-item nav-link" href="#">Pricing</a>
+			    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+			  </div>
+			</div>
+<!-- 			<div class="container"> -->
+<!-- 				<div class="navbar-header"> -->
+<!-- 					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse"  -->
+<!-- 							data-target="#navbar" aria-expanded="false" aria-controls="navbar"> -->
+<!-- 						<span class="sr-only">Toggle navigation</span> -->
+<!-- 						<span class="icon-bar"></span> -->
+<!-- 						<span class="icon-bar"></span> -->
+<!-- 						<span class="icon-bar"></span> -->
+<!-- 					</button> -->
+<!-- 					<a class="navbar-brand" href="/">Lexical Analyzer</a> -->
+<!-- 				</div> -->
+<!-- 				<div class="collapse navbar-collapse" id="navbar"> -->
+<!-- 					<ul class="nav navbar-nav"> -->
+<!-- 						<li><a href="/">Home</a></li> -->
+<!-- 						<li><a href="/non_lexical_words">Non-lexical words</a></li> -->
+<!-- 					</ul> -->
+<!-- 					<ul class="nav navbar-nav navbar-right"> -->
+<!-- 						<li><a href="/users/register">Register</a></li> -->
+<!-- 						<li><a href="/users/login">Login</a></li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+		</nav>
+		<div class="container">
+			{% block content %}
+		    	content in layout template
+		    {% endblock %}
+		
+			<h1>Calculate lexical density</h1>
+			<form method="POST" action="/calculate_lexical_density/">
+				<div id="form-group">
+					<label>Text:</label>
+					<textarea class="form-control" name="input_text" type="text">Kim loves going ​ to the ​ cinema</textarea>
+					<label>Verbose:&nbsp;<input name="verbose" type="checkbox" checked="checked"></label>
+				</div>
+				<br>
+				<input class="btn btn-primary" type="submit" value="Calculate lexical density">
+			</form>
+			<br>
+			<hr>
+			<footer>
+				<p></p>
+			</footer>
+		</div>
+		<!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="/js/main.js"> </script>
+	</body>
+</html>
